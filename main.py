@@ -44,9 +44,7 @@ while states_guessed < 50:
 
 states_to_study = []
 # with open("states_to_study.csv", "w") as study_file:
-for x in state_list:
-    if x not in guessed_states:
-        states_to_study.append(x)
+[states_to_study.append(x) for x in state_list if x not in guessed_states]
 
 print(states_to_study)
 new_data = pandas.DataFrame(states_to_study)
